@@ -1,42 +1,51 @@
-html{
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --pico-font-family-sans-serif: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --pico-border-radius: 0.5rem;
+    --pico-typography-spacing-vertical: 1.5rem;
 }
+
 body {
-    position: relative;
-    height: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
 }
 
-.profile-photo {
-    border-radius: 42%;
-    border: 1px solid #fff;
-    box-shadow: 0 0 0 2px #fff;
-    background-color: #fff;
+main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.mt {
-    margin-top: 4rem;
-}
-.mb {
-    margin-bottom: 4rem;
+h1 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, var(--pico-primary), #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
 }
 
-.header {
-    background-color: #263874;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 2px solid #fff;
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
-.footer {
-    background-color: #263874;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-    border-top: 2px solid #fff;
-    margin-top: auto;
+
+/* Enhancing buttons for a premium feel */
+[role="button"] {
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[role="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    transition: color 0.2s ease;
 }
